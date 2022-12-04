@@ -10,7 +10,7 @@ using System.ComponentModel.Composition;
 namespace Microsoft.VisualStudio.Editor.EmacsEmulation.Commands
 {
     /// <summary>
-    /// This command goes to the beginning of the physical line, not the display line as VS does with Word Wrap on.
+    /// This command goes to the beginning of the line with Word Wrap on.
     /// 
     /// Keys: Ctrl-A | Home 
     /// </summary>
@@ -21,11 +21,11 @@ namespace Microsoft.VisualStudio.Editor.EmacsEmulation.Commands
         {
             if (context.Manager.AfterSearch)
             {
-                context.EditorOperations.MoveCaretToStartOfPhysicalLine(false);
+                context.EditorOperations.MoveCaretToHome(false);
             }
             else
             {
-                context.EditorOperations.MoveCaretToStartOfPhysicalLine();
+                context.EditorOperations.MoveCaretToHome();
             }
         }
     }

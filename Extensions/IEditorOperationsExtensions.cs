@@ -166,5 +166,16 @@ namespace Microsoft.VisualStudio.Editor.EmacsEmulation
         {            
             editorOperations.TextView.TextBuffer.Delete(span);
         }
+
+        internal static void MoveCaretToHome(this IEditorOperations editorOperations)
+        {
+            editorOperations.MoveCaretToHome(ShouldExtendSelection(editorOperations));
+        }
+
+        internal static void MoveCaretToHome(this IEditorOperations editorOperations, bool extendSelection)
+        {
+            editorOperations.MoveToHome(extendSelection);
+        }
+
     }
 }
