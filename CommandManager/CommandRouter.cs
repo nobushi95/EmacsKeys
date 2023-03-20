@@ -233,6 +233,7 @@ namespace Microsoft.VisualStudio.Editor.EmacsEmulation
                     case (uint)VSConstants.VSStd2KCmdID.TAB:
                     case (uint)VSConstants.VSStd2KCmdID.OPENLINEABOVE:
                     case (uint)VSConstants.VSStd2KCmdID.RETURN:
+                    case (uint)VSConstants.VSStd2KCmdID.INSERTSNIPPET:
                         return true;
                 }
             }
